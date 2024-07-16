@@ -2,7 +2,7 @@
 REM Load properties from a file
 setlocal enabledelayedexpansion
 
-set PROPERTIES_FILE=C:\Oracle\Middleware\OracleHome\oracle_common\common\bin\config.properties
+set PROPERTIES_FILE=D:\Azure\weblogic\deploy\DeployJar\config.properties
 
 echo property files
 REM Function to read property value from the properties file
@@ -34,8 +34,8 @@ set CLASSPATH=C:\Oracle\Middleware\OracleHome\osb\lib\*;C:\Oracle\Middleware\Ora
 set CLASSPATH=C:\Oracle\Middleware\wlserver\server\lib\weblogic.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\oracle.servicebus.kernel-wls.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\oracle.servicebus.kernel-api.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\oracle.servicebus.configfwk.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\oracle.servicebus.config.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\oracle.servicebus.runtime.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\oracle.servicebus.management-api.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\oracle.servicebus.management.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\com.bea.common.configfwk_1.8.0.0.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\com.bea.alsb.core.runtime_12.2.1.0.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\oracle.servicebus.configfwk-wls.jar;C:\Oracle\Middleware\OracleHome\osb\lib\modules\oracle.servicebus.kernel-wls.jar;%CLASSPATH%
 
 REM set WLST_SCRIPT_PATH=C:\Oracle\Middleware\OracleHome\oracle_common\common\bin\deploy1.py
-set CUST_FILE_PATH=C:\Oracle\Middleware\OracleHome\oracle_common\common\bin\OSB_Customization.csv
-set PROP_FILE_PATH=C:\Oracle\Middleware\OracleHome\oracle_common\common\bin\config.properties
+set CUST_FILE_PATH=D:\Azure\weblogic\deploy\DeployJar\OSB_Customization.csv
+set PROP_FILE_PATH=D:\Azure\weblogic\deploy\DeployJar\config.properties
 REM Execute WLST script
 call %WL_HOME%\common\bin\wlst.cmd %WLST_SCRIPT_PATH% %OSB_PROJECT_JAR% %CUST_FILE_PATH% %PROP_FILE_PATH%
 

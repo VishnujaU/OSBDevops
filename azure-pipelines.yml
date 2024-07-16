@@ -5,9 +5,9 @@
 trigger:
 - master
 pool:
-  name: 'A1'
+  name: 'Azure Pipelines'
 steps:
-- task: CopyFiles@1
+- task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**/*.jar'
@@ -17,12 +17,12 @@ steps:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**/*.bat'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-- task: CopyFiles@3
+- task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**/*.csv'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-- task: CopyFiles@4
+- task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)'
     Contents: '**/*.properties'

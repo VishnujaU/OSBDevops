@@ -1,5 +1,5 @@
 trigger:
-- main
+- master
 pool:
   name: 'Default'  # Replace with your self-hosted agent pool name
 stages:
@@ -56,3 +56,6 @@ stages:
               SourceFolder: '$(Pipeline.Workspace)/drop'
               Contents: '**/*'
               TargetFolder: 'D:\Azure\weblogic\deploy'
+          - task: CmdLine@2
+            inputs:
+              script: 'D:\Azure\weblogic\deploy\DeployJar\deploy_osb.bat'
